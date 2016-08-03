@@ -15,12 +15,14 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 3.1.0'
-  s.add_dependency 'youtube_it', '~> 2.4.0'
+  s.add_dependency 'youtube_it'
 
   # test suite
-  s.add_development_dependency 'capybara', '~> 1.1'
-  s.add_development_dependency 'factory_girl_rails', '~> 3.0.0'
-  s.add_development_dependency 'rspec-rails',  '~> 2.9'
+
+  s.add_development_dependency 'capybara', '~> 2.1'
+  s.add_development_dependency 'factory_girl', '~> 4.4'
+  s.add_development_dependency 'rspec-rails',  '~> 2.13'
+
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'shoulda-matchers'
