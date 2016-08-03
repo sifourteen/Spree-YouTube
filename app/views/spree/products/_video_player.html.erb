@@ -39,5 +39,6 @@ else
   end
 end
 %>
-  <%== video.youtube_data.embed_html5(html5_config) %>
+
+  <%== video.youtube_data(video.youtube_ref).embed_html %>
 <% end if video.present? %>
