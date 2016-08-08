@@ -10,6 +10,7 @@ module Spree
       config.client_id = ENV["YOUTUBE_CLIENT_ID"]
       config.client_secret = ENV["YOUTUBE_CLIENT_SECRET"]
       config.api_key = ENV["YOUTUBE_CLIENT_API_KEY"]
+
     end
 
     def youtube_data vid_id
