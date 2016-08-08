@@ -1,18 +1,20 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_videos'
+  s.name        = 'spree_youtube'
   s.version     = '1.3.0'
-  s.summary     = 'Adds youtube videos to Spree commerce products'
-  s.description = 'Add multiuple youtube videos, and a thumbnail selector' +
-                  'for those products to a Spree commerce product'
+  s.summary     = 'Adds youtube videos to Spree e-commerce products'
+  s.description = 'Allows adding multiuple youtube videos, and a thumbnail selector' +
+                  'to a Spree commerce product using YouTube API'
   s.required_ruby_version = '>= 2.3.0'
 
-  s.author            = 'Michael Bianco'
-  s.email             = 'info@cliffsidedev.com'
-  s.homepage          = 'http://mabblog.com/'
+  s.author            = 'Yad F'
+  s.email             = 'yad.faeq+ruby@gmail.com'
+
+  s.homepage     = 'https://github.com/0bserver07/Spree-YouTube'
+  s.licenses = ["MIT"]
+  s.requirements = ["none"]
 
   s.require_path = 'lib'
-  s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 3.1.0'
   s.add_dependency 'youtube_it', '~> 2.4.2'

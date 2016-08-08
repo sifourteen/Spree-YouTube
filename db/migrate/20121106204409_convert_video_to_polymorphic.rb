@@ -1,6 +1,6 @@
 class ConvertVideoToPolymorphic < ActiveRecord::Migration
   def up
-    change_table :spree_videos do |t|
+    change_table :spree_youtube do |t|
       t.references :watchable, :polymorphic => true
     end
 
@@ -11,11 +11,11 @@ class ConvertVideoToPolymorphic < ActiveRecord::Migration
       video.save!
     end
 
-    remove_column :spree_videos, :product_id
+    remove_column :spree_youtube, :product_id
   end
 
   def down
-    remove_column :spree_videos, :watchable_type
-    remove_column :spree_videos, :watchable_id
+    remove_column :spree_youtube, :watchable_type
+    remove_column :spree_youtube, :watchable_id
   end
 end

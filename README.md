@@ -1,5 +1,7 @@
-Spree Videos
+Spree YouTube
 ===========
+
+***Disclaimer: this gem's skeleton was taken from an older broken [gem of Spree](https://github.com/iloveitaly/Spree-Videos).***
 
 Display YouTube video(s) on your product page.
 
@@ -25,20 +27,33 @@ If you are using Twitter Bootstrap, you can easily add title tooltips to your vi
 Installation
 ============
 
-	bundle exec rails g spree_videos:install
+	bundle exec rails g spree_youtube:install
 	
 	# auto run via the install generator, but in case you didn't run it
 	bundle exec rake db:migrate
 	
+
+Set these three environment varaibles (get your keys from:[Google Developers Console](https://console.developers.google.com/)):
+
+```
+	YOUTUBE_CLIENT_ID=
+	YOUTUBE_CLIENT_SECRET=
+	YOUTUBE_CLIENT_API_KEY=
+```
+
+[More details on finding they API keys here](https://github.com/Fullscreen/yt#configuring-your-app)
+
+----
+
 Configuration
 =============
 #### JS + HTML YouTube Parameters
 
-You can specify configuration options that get passed through to the JS dynamic youtube video switcher & the html5 embed. Take a look at `config/initializers/spree_videos.rb` for example configuration.
+You can specify configuration options that get passed through to the JS dynamic youtube video switcher & the html5 embed. Take a look at `config/initializers/spree_youtube.rb` for example configuration.
 
 #### Deface Override
 
-By default spree_videos inserts the videos into `#product_properties` in `products/show`. Disable the override to remove this behavior.
+By default spree_youtube inserts the videos into `#product_properties` in `products/show`. Disable the override to remove this behavior.
 
 #### CSS
 You can easily customize the display of the thumbnails / player:
@@ -69,8 +84,3 @@ You can easily customize the display of the thumbnails / player:
 		}
 	}
 
-Contributors
-============
-* Mark Linn, @markalinn
-* Michael Bianco, @iloveitaly
-* Aleksey, @alekseydem

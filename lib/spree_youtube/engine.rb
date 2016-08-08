@@ -1,8 +1,8 @@
-module SpreeVideos
+module SpreeYoutube
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
-    engine_name 'spree_videos'
+    engine_name 'spree_youtube'
 
     # use rspec for tests
     config.generators do |g|
