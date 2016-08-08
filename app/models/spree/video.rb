@@ -7,13 +7,12 @@ module Spree
     validates_uniqueness_of :youtube_ref, :scope => [:watchable_id, :watchable_type]
     Yt.configure do |config|
       config.log_level = :debug
-      config.client_id = '315306820128-3ca6u5ott2a2jqaqtr4jhmbih16j8iks.apps.googleusercontent.com'
-      config.client_secret = 'kGaAu9H9zI2GqoA_xqWrwydu'
-      config.api_key = 'AIzaSyA1zLM9SM1_SFlgCJGe3HHmNzmfg8-pPlg'
-
+      config.client_id = ENV["YOUTUBE_CLIENT_ID"]
+      config.client_secret = ENV["YOUTUBE_CLIENT_SECRET"]
+      config.api_key = ENV["YOUTUBE_CLIENT_API_KEY"]
     end
+
     def youtube_data vid_id
-      # puts youtube_ref, "HEEEEEEEEEE"
       Yt::Video.new id: vid_id
     end
 
