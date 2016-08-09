@@ -27,13 +27,20 @@ If you are using Twitter Bootstrap, you can easily add title tooltips to your vi
 Installation
 ============
 
+Add spree_youtube to your Gemfile:
+
+```ruby
+gem 'spree_youtube', github: '0bserver07/Spree-YouTube'
+```
+
+
 	bundle exec rails g spree_youtube:install
 	
 	# auto run via the install generator, but in case you didn't run it
 	bundle exec rake db:migrate
 	
 
-Set these three environment varaibles (get your keys from:[Google Developers Console](https://console.developers.google.com/)):
+Set these three environment varaibles (get your keys from: [Google Developers Console](https://console.developers.google.com/)):
 
 ```
 	YOUTUBE_CLIENT_ID=
